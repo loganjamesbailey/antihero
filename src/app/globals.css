@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  /* Below-the-waterline palette: quiet, tonal, nautical without the cliché. */
+  --color-ink: #10171d;
+  --color-tide: #20303a;
+  --color-slate: #5a6770;
+  --color-sand: #cdc2ad;
+  --color-bone: #f2eee4;
+  --color-paper: #f7f4ec;
+
+  --font-display: var(--font-display), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-sans), system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* A quiet, letter-spaced label used throughout. */
+.eyebrow {
+  font-size: 0.6875rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-slate);
+}
+
+/* Hairline divider — the "waterline". */
+.hairline {
+  height: 1px;
+  background-color: color-mix(in srgb, var(--color-ink) 16%, transparent);
+}
+
+::selection {
+  background-color: var(--color-ink);
+  color: var(--color-bone);
+}
